@@ -1,13 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        String name = "Marcin";
-        int year = 2022;
-        double salary = 1800.26;
-        String month = "April";
-        long day = 19;
-        System.out.println("Hello " + name);
-        System.out.println("miesiąc :" + month);
-        System.out.println("rok :" + year);
-        System.out.println("dzień :" + day);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Jak masz na imię?");
+        String name = scanner.nextLine();
+        System.out.println("Jak masz na nazwisko?");
+        String surname = scanner.nextLine();
+        System.out.println("Ile masz lat?");
+        String age_s = scanner.nextLine();
+        int age = Integer.parseInt(age_s);
+        System.out.println("Witaj " + name + " " + surname + " " + "masz " + age + " lat");
+
+            if (age > 18){
+                System.out.println("You are an adult - access granted!");
+            } else {
+                System.out.println("You are underage - access denied!");
+            }
+        }
     }
-}
